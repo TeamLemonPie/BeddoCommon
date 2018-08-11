@@ -1,9 +1,14 @@
 package de.lemonpie.beddocommon;
 
+import de.tobias.utils.settings.Key;
+
 public class ServerConnectionSettings
 {
+	@Key
 	private String hostName;
+	@Key
 	private boolean discover = true;
+	@Key
 	private int port;
 
 	public ServerConnectionSettings()
