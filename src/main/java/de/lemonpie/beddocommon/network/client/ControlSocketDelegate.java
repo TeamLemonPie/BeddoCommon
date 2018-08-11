@@ -1,4 +1,4 @@
-package de.lemonpie.beddocommon.network;
+package de.lemonpie.beddocommon.network.client;
 
 public interface ControlSocketDelegate
 {

@@ -1,7 +1,8 @@
-package de.lemonpie.beddocommon.network;
+package de.lemonpie.beddocommon.network.client;
 
 import com.google.gson.Gson;
 import de.lemonpie.beddocommon.ServerConnectionSettings;
+import de.lemonpie.beddocommon.network.CommandName;
 import de.tobias.logger.Logger;
 import de.tobias.utils.net.DiscoveryClient;
 

@@ -1,4 +1,4 @@
-package de.lemonpie.beddocommon.card;
+package de.lemonpie.beddocommon.model.card;
 
 public enum CardSymbol
 {

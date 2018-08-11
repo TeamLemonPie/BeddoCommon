@@ -1,6 +1,8 @@
-package de.lemonpie.beddocommon.network;
+package de.lemonpie.beddocommon.network.client;
 
 import com.google.gson.JsonElement;
+import de.lemonpie.beddocommon.network.CommandName;
+import de.lemonpie.beddocommon.network.Scope;
 
 public class ControlCommandData
 {

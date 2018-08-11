@@ -13,15 +13,16 @@ public enum CommandName
 	PLAYER_STATE("state"),
 	PLAYER_CHIP("chip"),
 	PLAYER_OP("player-op"),
-
 	WIN_PROBABILITY("winProbability"),
-	READER_COUNT("reader-count"),
-
-	DATA("data"),
 
 	BLOCK("block"),
 
+	DATA("data"),
+	READER_COUNT("reader-count"),
+
 	PAUSE("pause"),
+	NEXT_PAUSE("next-pause"), // WEB ONLY
+
 	SMALL_BLIND("small-blind"),
 	BIG_BLIND("big-blind"),
 	ANTE("ante");
