@@ -1,10 +1,11 @@
-package de.lemonpie.beddocommon.model;
+package de.lemonpie.beddocommon.model.lowerthird;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+import de.lemonpie.beddocommon.model.Indexable;
 
 @DatabaseTable(tableName = "LowerThird")
-public class LowerThird
+public class LowerThird implements Indexable
 {
 	@DatabaseField(unique = true, generatedId = true)
 	private int id;
