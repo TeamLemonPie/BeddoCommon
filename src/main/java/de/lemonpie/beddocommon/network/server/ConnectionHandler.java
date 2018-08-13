@@ -13,7 +13,7 @@ public class ConnectionHandler implements Runnable
 	private Thread thread;
 	private ControlServerSocket serverSocket;
 
-	private static List<ClientHandler> clientHandlers = new ArrayList<>();
+	private List<ClientHandler> clientHandlers = new ArrayList<>();
 
 	public ConnectionHandler(ControlServerSocket serverSocket)
 	{
