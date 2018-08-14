@@ -1,6 +1,7 @@
 package de.lemonpie.beddocommon.network.server;
 
 import com.google.gson.Gson;
+import de.lemonpie.beddocommon.network.CommandData;
 import de.tobias.logger.Logger;
 
 import java.io.Closeable;

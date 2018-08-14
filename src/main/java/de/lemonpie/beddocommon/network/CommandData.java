@@ -1,12 +1,9 @@
-package de.lemonpie.beddocommon.network.server;
+package de.lemonpie.beddocommon.network;
 
 import com.google.gson.JsonElement;
-import de.lemonpie.beddocommon.network.CommandName;
-import de.lemonpie.beddocommon.network.Scope;
 
 public class CommandData
 {
-
 	private Scope scope;
 	private String command;
 	private int key;

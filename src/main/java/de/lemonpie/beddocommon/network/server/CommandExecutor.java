@@ -1,5 +1,7 @@
 package de.lemonpie.beddocommon.network.server;
 
+import de.lemonpie.beddocommon.network.Command;
+import de.lemonpie.beddocommon.network.CommandData;
 import de.lemonpie.beddocommon.network.CommandName;
 import de.lemonpie.beddocommon.network.Scope;
 

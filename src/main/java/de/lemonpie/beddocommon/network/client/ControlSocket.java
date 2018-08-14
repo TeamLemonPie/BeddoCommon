@@ -2,6 +2,8 @@ package de.lemonpie.beddocommon.network.client;
 
 import com.google.gson.Gson;
 import de.lemonpie.beddocommon.ServerConnectionSettings;
+import de.lemonpie.beddocommon.network.Command;
+import de.lemonpie.beddocommon.network.CommandData;
 import de.lemonpie.beddocommon.network.CommandName;
 import de.tobias.logger.Logger;
 import de.tobias.utils.net.DiscoveryClient;
@@ -148,7 +150,7 @@ public class ControlSocket implements Runnable
 		}
 	}
 
-	public void write(ControlCommandData command) throws SocketException
+	public void write(CommandData command) throws SocketException
 	{
 		Logger.debug(gson.toJson(command));
 		write(gson.toJson(command));
@@ -211,7 +213,7 @@ public class ControlSocket implements Runnable
 			while((line = inputStream.readLine()) != null)
 			{
 				Logger.info("Read from Admin Socket: " + line);
-				ControlCommandData commandData = gson.fromJson(line, ControlCommandData.class);
+				CommandData commandData = gson.fromJson(line, CommandData.class);
 
 				commands.forEach((name, command) -> {
 					if(name.getName().equalsIgnoreCase(commandData.getCommand()))
