@@ -1,11 +1,14 @@
 package de.lemonpie.beddocommon.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.*;
 import java.util.function.Consumer;
 
 public class ObservableList<T extends Indexable> implements Iterable<T>
 {
 	private List<T> data = new ArrayList<>();
+	@JsonIgnore
 	private List<ObservableListListener<T>> listeners = new LinkedList<>();
 
 	public T add(T obj)

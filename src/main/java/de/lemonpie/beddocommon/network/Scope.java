@@ -4,6 +4,7 @@ public enum Scope
 {
 	ADMIN,
 	READER,
+	DIRECTOR,
 
 	COUNTDOWN,
 	PLAYER_FEEDBACK,

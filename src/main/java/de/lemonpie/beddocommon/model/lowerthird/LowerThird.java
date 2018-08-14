@@ -1,5 +1,6 @@
 package de.lemonpie.beddocommon.model.lowerthird;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import de.lemonpie.beddocommon.model.Indexable;
@@ -12,7 +13,24 @@ public class LowerThird implements Indexable
 	@DatabaseField
 	private String name;
 	@DatabaseField
-	private String data;
+	@JsonIgnore
+	private transient String data;
+
+	public LowerThird()
+	{
+	}
+
+	public LowerThird(int id, String name)
+	{
+		this.id = id;
+		this.name = name;
+	}
+
+	public LowerThird(String name, String data)
+	{
+		this.name = name;
+		this.data = data;
+	}
 
 	public int getId()
 	{

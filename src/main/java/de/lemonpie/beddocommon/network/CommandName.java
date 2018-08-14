@@ -26,7 +26,10 @@ public enum CommandName
 
 	SMALL_BLIND("small-blind"),
 	BIG_BLIND("big-blind"),
-	ANTE("ante");
+	ANTE("ante"),
+
+	LOWER_THIRD_ADD("lower_third_add"),
+	LOWER_THIRD_LIST("lower_third_list");
 
 	private String name;
 
