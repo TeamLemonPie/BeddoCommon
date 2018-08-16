@@ -1,7 +1,9 @@
 package de.lemonpie.beddocommon;
 
+import de.tobias.utils.settings.FilePath;
 import de.tobias.utils.settings.Key;
 
+@FilePath("network.yml")
 public class ServerConnectionSettings
 {
 	@Key
