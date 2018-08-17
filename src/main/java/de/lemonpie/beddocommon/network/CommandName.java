@@ -29,7 +29,9 @@ public enum CommandName
 	ANTE("ante"),
 
 	LOWER_THIRD_ADD("lower_third_add"),
-	LOWER_THIRD_LIST("lower_third_list");
+	LOWER_THIRD_LIST("lower_third_list"),
+	LOWER_THIRD_START("lower_third_start"),
+	LOWER_THIRD_FINISH("lower_third_finish");
 
 	private String name;
 
