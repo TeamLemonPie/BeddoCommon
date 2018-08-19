@@ -57,6 +57,11 @@ public class ObservableList<T extends Indexable> implements Iterable<T>
 		return remove;
 	}
 
+	public int size()
+	{
+		return data.size();
+	}
+
 	public void addListener(ObservableListListener<T> playerListener)
 	{
 		this.listeners.add(playerListener);
