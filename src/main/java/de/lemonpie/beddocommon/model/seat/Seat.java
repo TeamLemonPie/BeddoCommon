@@ -13,7 +13,7 @@ public class Seat implements Indexable
 {
 	public static final int READER_NULL_ID = -3;
 
-	private List<SeatListener> listeners;
+	private transient List<SeatListener> listeners;
 
 	@DatabaseField(unique = true)
 	private int id;

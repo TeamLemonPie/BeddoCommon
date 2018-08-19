@@ -15,6 +15,7 @@ public enum CommandName
 	PLAYER_OP("player-op"),
 	WIN_PROBABILITY("winProbability"),
 	PLAYER_HIGHLIGHT("highlight"),
+	SEAT("seat"),
 
 	BLOCK("block"),
 
