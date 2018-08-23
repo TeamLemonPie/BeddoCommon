@@ -15,7 +15,7 @@ public class Seat implements Indexable
 
 	private transient List<SeatListener> listeners;
 
-	@DatabaseField(unique = true)
+	@DatabaseField(unique = true, id = true)
 	private int id;
 
 	@DatabaseField
