@@ -12,6 +12,7 @@ import java.util.function.Consumer;
 public class Seat implements Indexable
 {
 	public static final int READER_NULL_ID = -3;
+	public static final int PLAYER_NULL_ID = -1;
 
 	private transient List<SeatListener> listeners;
 
@@ -31,7 +32,7 @@ public class Seat implements Indexable
 
 	public Seat(int id)
 	{
-		this(id, READER_NULL_ID, -1);
+		this(id, READER_NULL_ID, PLAYER_NULL_ID);
 	}
 
 	public Seat(int id, int readerId, int playerId)
@@ -102,5 +103,10 @@ public class Seat implements Indexable
 				", readerId=" + readerId +
 				", playerId=" + playerId +
 				'}';
+	}
+
+	public void removePlayer()
+	{
+		setPlayerId(-1);
 	}
 }

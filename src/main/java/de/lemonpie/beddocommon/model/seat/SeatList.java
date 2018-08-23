@@ -18,4 +18,16 @@ public class SeatList extends ObservableList<Seat>
 
 		return Optional.empty();
 	}
+
+	public Optional<Seat> getSeatByReader(int readerId)
+	{
+		for(Seat seat : getData())
+		{
+			if(seat.getReaderId() == readerId)
+			{
+				return Optional.of(seat);
+			}
+		}
+		return Optional.empty();
+	}
 }
