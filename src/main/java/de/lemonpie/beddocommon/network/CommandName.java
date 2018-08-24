@@ -6,6 +6,7 @@ public enum CommandName
 	CLEAR("clear"),
 	CARD("card"),
 	BOARD_CARD("board_card"),
+	MANAGE_CARD("manageCard"),
 	READER("reader"), // CONFIG
 
 	PLAYER_NAME("name"),
@@ -15,6 +16,7 @@ public enum CommandName
 	PLAYER_OP("player-op"),
 	WIN_PROBABILITY("winProbability"),
 	PLAYER_HIGHLIGHT("highlight"),
+	PLAYER_MANAGE_CARD("playerManageCard"),
 	SEAT("seat"),
 
 	BLOCK("block"),
