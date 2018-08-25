@@ -18,6 +18,7 @@ public enum CommandName
 	PLAYER_HIGHLIGHT("highlight"),
 	PLAYER_MANAGE_CARD("playerManageCard"),
 	SEAT("seat"),
+	SEAT_PLAYER_ID("seatPlayerId"),
 
 	BLOCK("block"),
 

@@ -77,21 +77,21 @@ public class Seat implements Indexable
 		fireListener(listener -> listener.playerIdDidChange(this, playerId));
 	}
 
-	public void addListener(SeatListener playerListener)
+	public void addListener(SeatListener seatListener)
 	{
-		this.listeners.add(playerListener);
+		this.listeners.add(seatListener);
 	}
 
-	public void removeListener(SeatListener playerListener)
+	public void removeListener(SeatListener seatListener)
 	{
-		this.listeners.remove(playerListener);
+		this.listeners.remove(seatListener);
 	}
 
 	private void fireListener(Consumer<SeatListener> consumer)
 	{
-		for(SeatListener playerListener : listeners)
+		for(SeatListener seatListener : listeners)
 		{
-			consumer.accept(playerListener);
+			consumer.accept(seatListener);
 		}
 	}
 
