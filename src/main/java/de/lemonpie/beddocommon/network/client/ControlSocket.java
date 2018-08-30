@@ -72,6 +72,11 @@ public class ControlSocket implements Runnable
 		commands.put(command.name(), command);
 	}
 
+	public String getHost()
+	{
+		return host;
+	}
+
 	public boolean connect()
 	{
 		if(host == null && settings.isDiscover())
