@@ -32,6 +32,8 @@ public enum CommandName
 	BIG_BLIND("big-blind"),
 	ANTE("ante"),
 
+	OVERLAY_HIDE("overlay_hide"),
+
 	LOWER_THIRD_ADD("lower_third_add"),
 	LOWER_THIRD_LIST("lower_third_list"),
 	LOWER_THIRD_START("lower_third_start"),
