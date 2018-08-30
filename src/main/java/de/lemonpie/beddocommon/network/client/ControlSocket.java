@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketException;
@@ -84,7 +85,11 @@ public class ControlSocket implements Runnable
 			DiscoveryClient discoveryClient = new DiscoveryClient();
 			discoveryClient.setPort(9990);
 			discoveryClient.setMessageKey("BEDDOMISCHER");
-			host = discoveryClient.discover().getHostAddress();
+			final InetAddress discover = discoveryClient.discover();
+			if(discover != null)
+			{
+				host = discover.getHostAddress();
+			}
 		}
 
 		delegate.startConnecting(host, port);
