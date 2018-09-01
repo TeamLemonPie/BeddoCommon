@@ -3,18 +3,28 @@ package de.lemonpie.beddocommon.ui;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.TextAlignment;
+import tools.ConvertTo;
 
 public class StatusTag extends VBox
 {
 	private String text;
 	private StatusTagType type;
 	private String additionalText;
+	private Color colorAdditionalText;
 
 	public StatusTag(String text, StatusTagType type, String additionalText)
+	{
+		this(text, type, additionalText, Color.BLACK);
+	}
+
+	public StatusTag(String text, StatusTagType type, String additionalText, Color colorAdditionalText)
 	{
 		this.text = text;
 		this.type = type;
 		this.additionalText = additionalText;
+		this.colorAdditionalText = colorAdditionalText;
 
 		setAlignment(Pos.TOP_CENTER);
 
@@ -27,12 +37,15 @@ public class StatusTag extends VBox
 
 		Label labelTag = new Label(text);
 		labelTag.setStyle(getStyleForType());
+		labelTag.setMaxWidth(Double.MAX_VALUE);
+		labelTag.setTextAlignment(TextAlignment.CENTER);
+		labelTag.setAlignment(Pos.CENTER);
 		getChildren().add(labelTag);
 
 		if(additionalText != null)
 		{
 			Label labelAdditionalText = new Label(additionalText);
-			labelAdditionalText.setStyle("-fx-font-size: 12px; -fx-text-fill: black");
+			labelAdditionalText.setStyle("-fx-font-size: 12px; -fx-text-fill: " + ConvertTo.toRGBHexWithoutOpacity(colorAdditionalText));
 			getChildren().add(labelAdditionalText);
 		}
 	}
