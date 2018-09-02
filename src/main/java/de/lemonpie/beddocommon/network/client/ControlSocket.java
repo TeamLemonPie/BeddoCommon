@@ -21,7 +21,6 @@ import java.util.Map;
 
 public class ControlSocket implements Runnable
 {
-
 	public static final int MAX = 10;
 	public static final int SLEEP_TIME = 5000;
 
@@ -240,7 +239,7 @@ public class ControlSocket implements Runnable
 		}
 		catch(IOException e)
 		{
-			e.printStackTrace();
+			Logger.error(e);
 		}
 		finally
 		{
@@ -250,7 +249,7 @@ public class ControlSocket implements Runnable
 			}
 			catch(IOException e)
 			{
-				e.printStackTrace();
+				Logger.error(e);
 			}
 		}
 	}
