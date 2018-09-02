@@ -4,5 +4,6 @@ public enum OverlayHideOption
 {
 	ALL,
 	PLAYER,
-	BOARD
+	BOARD,
+	NONE
 }
