@@ -40,6 +40,12 @@
             <artifactId>ormlite-jdbc</artifactId>
             <version>${ormlite-jdbc.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>de.tobias</groupId>
+            <artifactId>libMidi</artifactId>
+            <version>${libMidi.version}</version>
+        </dependency>
     </dependencies>
 
     <distributionManagement>
