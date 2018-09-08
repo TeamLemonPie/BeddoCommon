@@ -4,6 +4,7 @@ import de.lemonpie.beddocommon.network.Command;
 import de.lemonpie.beddocommon.network.CommandData;
 import de.lemonpie.beddocommon.network.CommandName;
 import de.lemonpie.beddocommon.network.Scope;
+import de.tobias.logger.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -41,9 +42,16 @@ public class CommandExecutor
 	public void execute(CommandData commandData)
 	{
 		commands.get(commandData.getScope()).forEach((name, command) -> {
-			if(name.getName().equals(commandData.getCommand()))
+			try
 			{
-				command.execute(commandData);
+				if(name.getName().equals(commandData.getCommand()))
+				{
+					command.execute(commandData);
+				}
+			}
+			catch(Exception e)
+			{
+				Logger.error(e);
 			}
 		});
 	}
