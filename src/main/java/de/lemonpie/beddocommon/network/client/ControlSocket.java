@@ -81,13 +81,18 @@ public class ControlSocket implements Runnable
 	{
 		if(host == null && settings.isDiscover())
 		{
-			DiscoveryClient discoveryClient = new DiscoveryClient();
-			discoveryClient.setPort(9990);
-			discoveryClient.setMessageKey("BEDDOMISCHER");
-			final InetAddress discover = discoveryClient.discover();
-			if(discover != null)
+			InetAddress discover = null;
+
+			while(discover == null)
 			{
-				host = discover.getHostAddress();
+				DiscoveryClient discoveryClient = new DiscoveryClient();
+				discoveryClient.setPort(9990);
+				discoveryClient.setMessageKey("BEDDOMISCHER");
+				discover = discoveryClient.discover();
+				if(discover != null)
+				{
+					host = discover.getHostAddress();
+				}
 			}
 		}
 
