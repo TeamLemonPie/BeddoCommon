@@ -166,7 +166,12 @@ public class ControlSocket implements Runnable
 
 	public void write(CommandData command) throws SocketException
 	{
-		Logger.debug(gson.toJson(command));
+		if(isNewValueComingFromServer())
+		{
+			return;
+		}
+
+		Logger.debug("Write {0}", gson.toJson(command));
 		write(gson.toJson(command));
 	}
 
@@ -226,7 +231,7 @@ public class ControlSocket implements Runnable
 			String line;
 			while((line = inputStream.readLine()) != null)
 			{
-				Logger.info("Read from Admin Socket: " + line);
+				Logger.debug("Read {0}", line);
 				CommandData commandData = gson.fromJson(line, CommandData.class);
 
 				commands.forEach((name, command) -> {

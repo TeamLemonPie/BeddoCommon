@@ -62,7 +62,7 @@ public class ClientHandler implements Runnable
 			while((line = inputStream.readLine()) != null)
 			{
 				// Handle line
-				Logger.info("Read from [" + socket.getRemoteSocketAddress() + "]: " + line);
+				Logger.debug("Read from [" + socket.getRemoteSocketAddress() + "]: " + line);
 
 				CommandData commandData = gson.fromJson(line, CommandData.class);
 				CommandExecutor.getInstance().execute(commandData);
