@@ -13,8 +13,6 @@ It's main purpose is to provide classes and files that are shared between multip
 * com.j256.ormlite:ormlite-core:5.1 (ISC License)
 * com.j256.ormlite:ormlite-jdbc:5.1 (ISC License)
 * com.google.code.gson:gson:2.8.0 (Apache 2.0)
-
-
 * de.tobias:libMidi:1.1.4
 * de.tobias:libUtils:1.6.7
 * de.tobias:libNetwork:1.0.1
